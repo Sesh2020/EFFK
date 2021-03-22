@@ -1,0 +1,14 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: fluentbit-persistent-volume
+  labels:
+    type: local
+spec:
+  storageClassName: pv-fluent-bit 
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/fb-pv1"
