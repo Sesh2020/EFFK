@@ -1,0 +1,10 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: fluentd
+  namespace: efk-fluentbit
+spec:
+  selector:
+    app: fluentd
+  ports:
+    - port: 24224
